@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: deo3mtscx
+  api_key: '518979414681627'
+  api_secret: hRb24Jw6lSZco2gbYi6yRKVTNOo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: deo3mtscx
+  api_key: '518979414681627'
+  api_secret: hRb24Jw6lSZco2gbYi6yRKVTNOo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: deo3mtscx
+  api_key: '518979414681627'
+  api_secret: hRb24Jw6lSZco2gbYi6yRKVTNOo
+  enhance_image_tag: true
+  static_image_support: false
