@@ -38,5 +38,8 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 	end
 	
+	def index  
+  	@posts = Post.order(id: :desc).page params[:page]
+	end  
 		
 end

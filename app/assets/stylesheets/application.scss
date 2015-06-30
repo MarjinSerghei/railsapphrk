@@ -6,3 +6,41 @@
 @import "bootstrap";
 @import "bootstrap-sprockets";
 
+.login-panel {
+  padding: 20px;
+  margin-top: 40px;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.signing-bg {
+  height: 100%;
+  background: image-url("background.jpeg");
+  background-size: cover;
+}
+
+.collection {
+ -moz-column-width: 20em;
+ -webkit-column-width: 20em;
+ column-width: 20em;
+ -moz-column-gap: 10px;
+ -webkit-column-gap: 10px; 
+ column-gap: 10px;
+
+  .item {
+   display: inline-block;
+   padding: 0;
+   width:  100%; 
+   float:none;
+  }
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.container {
+  padding-top: 20px;
+}

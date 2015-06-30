@@ -1,4 +1,6 @@
-<%=form_for @post do |f| %>  
-<%=f.text_field :link %>  
-<%=f.submit %>  
-<% end %>  
+ <%= form_for @post do |form| %>  
+      <%= form.text_field :title %><br> 
+      <%= form.text_field :body %><br>
+      <%= form.file_field :image, as: :attachinary %>
+      <%= form.button :submit %>  
+    <% end %>  
