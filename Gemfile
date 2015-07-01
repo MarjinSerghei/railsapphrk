@@ -26,7 +26,7 @@ gem 'bootstrap-kaminari-views'
 
 gem 'rb-readline'
 
-gem 'figaro'
+gem 'omniauth-facebook'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
