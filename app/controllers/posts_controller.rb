@@ -40,6 +40,26 @@ class PostsController < ApplicationController
 	
 	def index  
   	@posts = Post.order(id: :desc).page params[:page]
+   # @posts=Post.all
 	end  
-		
+	
+  def show  
+  @post = Post.find(params[:id])
+  end  
+
+   def upvote
+    @post = Post.find(params[:id])
+    rating = @post.ratings.find_or_create_by(user: current_user)
+    rating.value = 1
+    rating.save
+    redirect_to posts_path
+  end
+
+  def downvote
+    @post = Post.find(params[:id])
+    rating = @post.ratings.find_or_create_by(user: current_user)
+    rating.value = -1
+    rating.save
+    redirect_to posts_path
+  end
 end

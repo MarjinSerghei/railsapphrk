@@ -1,0 +1,10 @@
+<div class="container">  
+  <h1>
+    <%= @user.name %>
+  </h1>
+
+  <h6>Latest posts:</h6>
+  <div class="collection">
+    <%= render @user.recent_posts %>
+  </div>
+</div>  
