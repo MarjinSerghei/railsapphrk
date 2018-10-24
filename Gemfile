@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-
+ruby "2.3.7"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
-# Use postgresql as the database for Active Record
-#gem 'pg'
+gem 'rails', '4.2.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -16,7 +14,7 @@ gem 'devise'
 
 gem 'bootstrap-sass'
 
-gem 'cloudinary' 
+gem 'cloudinary'
 
 gem 'attachinary'
 
@@ -27,6 +25,8 @@ gem 'bootstrap-kaminari-views'
 gem 'rb-readline'
 
 gem 'omniauth-facebook'
+
+gem 'pg', '~> 0.18'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -58,8 +58,7 @@ group :development, :test do
   gem 'spring'
 end
 
-group :production do  
-  gem 'pg'
+group :production do
   gem 'thin'
   gem 'rails_12factor'
-end  
+end
