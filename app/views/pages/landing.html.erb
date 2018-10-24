@@ -14,17 +14,28 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <%= link_to("Register now", new_user_registration_path)%>
-                    </li>
+                    <% if signed_in? %>
+                        <li>
+                            <%= link_to("Postare nouă", new_post_path) %>
+                        </li>
+                        <li>
+                            <%= link_to("Toate postările", posts_path) %>
+                        </li>
+                        <li>
+                            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                        </li>
+                    <% else %>
+                        <li>
+                            <%= link_to("Register now", new_user_registration_path)%>
+                        </li>
+                        <li>
+                            <%= link_to("Logare", new_user_session_path)%>
+                        </li>
+                    <% end %>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
- 
-
 
     <!-- Header -->
     <a name="about"></a>
@@ -38,9 +49,11 @@
                         <h3>Azi tu, Mâine eu e o comunitate de oameni care dau și primesc în dar lucruri.</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <%= link_to("Înregistrează-te", new_user_registration_path, class: "btn-default btn") %>
-                            </li>
+                            <% if signed_in? %>
+                                <li>
+                                    <%= link_to("Postare nouă", new_post_path, class: "btn-default btn") %>
+                                </li>
+                            <% end %>
                             <li>
                                 <%= link_to("Află mai multe", features_path, class: "btn-default btn") %>
                             </li>

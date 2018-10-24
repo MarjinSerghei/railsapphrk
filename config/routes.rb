@@ -8,11 +8,14 @@ Rails.application.routes.draw do
     get "downvote"
   end
 end    	
-	authenticated :user do
-	root to: "posts#index", as: "authenticated_user"
-	end
-	root to: "pages#landing"
+	# authenticated :user do
+ #    root to: "pages#landing"
+	#   # root to: "posts#index", as: "authenticated_user"
+	# end
+
+  root to: "pages#landing"
+
 	get "features" => "pages#features"
-	get "landing" => "pages#landing"
+
 	resources :users, only: [:show]
 end
