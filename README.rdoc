@@ -3,3 +3,52 @@
 * Ruby version - 2.3.7
 
 * Rails version - 4.2.10
+
+
+=== Postgres:
+Install
+        1. brew install postgres
+Remove
+        1. brew uninstall --force postgresql
+        2. rm -rf /usr/local/var/postgres
+
+Start manually
+        1. pg_ctl -D /usr/local/var/postgres start
+Start automatically
+        1. brew services start postgresql
+
+	More info here: https://medium.com/@Umesh_Kafle/postgresql-and-postgis-installation-in-mac-os-87fa98a6814d
+----
+=== RVM
+Add gpg keys:
+        1. gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+Install rvm with stable Ruby:
+        2. \curl -sSL https://get.rvm.io | bash -s stable --ruby
+        
+Install required Ruby version:
+        1. rvm install ruby-2.3.7
+	
+	More info here: https://rvm.io/rvm/install
+----
+=== Prepare rails environment by running the following commands:
+- bundle install
+- rake db:reset
+- rake db:migrate
+
+More info on cucumber here:
+- https://github.com/cucumber/cucumber-rails
+- https://semaphoreci.com/community/tutorials/introduction-to-writing-acceptance-tests-with-cucumber
+- https://github.com/teamcapybara/capybara#using-capybara-with-cucumber
+
+How to run rails on local machine:
+        1. rails s
+
+Write a test for each of the features:
+1. Sign-up
+2. Sign-in
+3. New post
+4. Edit post
+5. Delete post
+6. Add comment to post
+7. Upload image file to post
+8. All created posts are in place
