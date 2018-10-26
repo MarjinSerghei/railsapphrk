@@ -46,7 +46,7 @@ The default port is 3000. To change it to another type:
         1. rails s -p <port>
 ----
 === Requirements
-Write a test for each of the features:
+Write a feature spec for each of the following features:
 1. Sign-up
 2. Sign-in
 3. New post
@@ -56,4 +56,4 @@ Write a test for each of the features:
 7. Upload image file to post
 8. All created posts are in place
 
-*Note:* Place all feature specs under /feature folder. There is already an example.feature file.
+*Note:* Place all feature specs under /feature folder. There is already an _example.feature_ file.
