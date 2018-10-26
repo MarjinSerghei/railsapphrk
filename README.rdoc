@@ -42,7 +42,10 @@ More info on cucumber here:
 
 How to run rails on local machine:
         1. rails s
-
+The default port is 3000. To change it to another type:
+        1. rails s -p <port>
+----
+=== Requirements
 Write a test for each of the features:
 1. Sign-up
 2. Sign-in
@@ -52,3 +55,5 @@ Write a test for each of the features:
 6. Add comment to post
 7. Upload image file to post
 8. All created posts are in place
+
+*Note:* Place all feature specs under /feature folder. There is already an example.feature file.
